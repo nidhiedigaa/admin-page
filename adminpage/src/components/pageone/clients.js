@@ -19,10 +19,10 @@ function Clients(props)
         </thead>
         <tbody>
             <tr >
-            <th>Name <i class="fa-solid fa-arrow-down-long"></i></th>
-            <th>Email <i class="fa-solid fa-arrow-down-long"></i></th>
-            <th>Status <i class="fa-solid fa-arrow-down-long"></i></th>
-            <th>Action <i class="fa-solid fa-arrow-down-long"></i></th>
+            <th>Name <i className="fa-solid fa-arrow-down-long"></i></th>
+            <th>Email <i className="fa-solid fa-arrow-down-long"></i></th>
+            <th>Status <i className="fa-solid fa-arrow-down-long"></i></th>
+            <th>Action <i className="fa-solid fa-arrow-down-long"></i></th>
             </tr>
             <tr>
               <td style={styles}> <img width="50px" height="50px" style={{borderRadius:"80px"}} src={'profileimages/matt.jpg'} alt=""/>  Barry Cuda CEO</td>

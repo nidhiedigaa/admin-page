@@ -13,11 +13,11 @@ function Payments(props)
         </thead>
         <tbody>
             <tr >
-              <th>Invoice ID <i class="fa-solid fa-arrow-down-long"></i></th>
-              <th>Client <i class="fa-solid fa-arrow-down-long"></i></th>
-              <th>Payment Type <i class="fa-solid fa-arrow-down-long"></i></th>
-              <th>Paid Date <i class="fa-solid fa-arrow-down-long"></i></th>
-              <th>Paid Amount <i class="fa-solid fa-arrow-down-long"></i></th>
+              <th>Invoice ID <i className="fa-solid fa-arrow-down-long"></i></th>
+              <th>Client <i className="fa-solid fa-arrow-down-long"></i></th>
+              <th>Payment Type <i className="fa-solid fa-arrow-down-long"></i></th>
+              <th>Paid Date <i className="fa-solid fa-arrow-down-long"></i></th>
+              <th>Paid Amount <i className="fa-solid fa-arrow-down-long"></i></th>
             </tr>
             <tr>
             <td>#INV-0001</td>
