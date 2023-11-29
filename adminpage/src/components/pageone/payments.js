@@ -5,19 +5,19 @@ import {Table} from "react-bootstrap"
 function Payments(props)
 {
     return(<>
-     <Table>
-        <thead>
+     <Table className="border">
+        <thead className="border border-2">
           <tr>
-          <td colSpan={5} className="p-3 fw-bolder">Payments</td>
+          <td colSpan={5} className="p-3 fw-bolder" style={{fontSize:"18px",letterSpacing:"1px"}}>Payments</td>
           </tr>
         </thead>
         <tbody>
             <tr >
-              <th>Invoice ID</th>
-              <th>Client</th>
-              <th>Payment Type</th>
-              <th>Paid Date</th>
-              <th>Paid Amount</th>
+              <th>Invoice ID <i class="fa-solid fa-arrow-down-long"></i></th>
+              <th>Client <i class="fa-solid fa-arrow-down-long"></i></th>
+              <th>Payment Type <i class="fa-solid fa-arrow-down-long"></i></th>
+              <th>Paid Date <i class="fa-solid fa-arrow-down-long"></i></th>
+              <th>Paid Amount <i class="fa-solid fa-arrow-down-long"></i></th>
             </tr>
             <tr>
             <td>#INV-0001</td>
@@ -41,7 +41,7 @@ function Payments(props)
             <td>$60</td>
             </tr>
         </tbody>
-        <tfoot>
+        <tfoot className="border border-2">
           <tr>
             <td colSpan={5} className="text-center">View all payments</td>
           </tr>

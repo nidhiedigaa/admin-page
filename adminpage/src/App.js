@@ -7,7 +7,7 @@ import RecentProjects from './components/pageone/recentprojects';
 function App() {
   return (
     <div className="App">
-      <div className="admin-page-3">
+      <div className="admin-page-3 ">
       <Invoices></Invoices>
       <Payments></Payments>
       <Clients></Clients>

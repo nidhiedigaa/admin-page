@@ -5,19 +5,19 @@ import "./pageone.css"
 function Invoices(props)
 {
     return(<>
-    <Table>
-        <thead>
+    <Table className="border">
+        <thead className="border border-2">
           <tr>
-          <td colSpan={5} className="p-3 fw-bold">Invoices</td>
+          <td colSpan={5} className="p-3 fw-bold" style={{fontSize:"18px",letterSpacing:"1px"}}>Invoices</td>
           </tr>
         </thead>
         <tbody>
             <tr >
-                <th>Invoice ID </th>
-                <th >Client</th>
-                <th>Due Date</th>
-                <th>Total</th>
-                <th>Status</th>
+                <th>Invoice ID <i class="fa-solid fa-arrow-down-long"></i></th>
+                <th >Client <i class="fa-solid fa-arrow-down-long"></i></th>
+                <th>Due Date <i class="fa-solid fa-arrow-down-long"></i></th>
+                <th>Total <i class="fa-solid fa-arrow-down-long"></i></th>
+                <th>Status <i class="fa-solid fa-arrow-down-long"></i></th>
             </tr>
             <tr>
                 <td>#INV-0001</td>
@@ -41,7 +41,7 @@ function Invoices(props)
             <td><Alert variant="danger" className=" d-inline fw-bold" style={{color:"maroon",padding:"0 5px",fontSize:"15px"}}>Unpaid</Alert></td>
             </tr>
         </tbody>
-        <tfoot>
+        <tfoot className="border border-2">
           <tr className="text-center">
         <td colSpan={5}>View all invoices</td>
           </tr>

@@ -5,19 +5,19 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 function RecentProjects(props)
 {
     return(<>
-    <Table>
-        <thead>
+    <Table className="border">
+        <thead className="border border-2">
             <tr>
-                <td colSpan="3" className="fw-bold">
+                <td colSpan="3" className="fw-bold" style={{fontSize:"18px",letterSpacing:"1px"}}>
                     Recent Projects
                 </td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th width="55%">Project Name</th>
-                <th>Progress</th>
-                <th>Action</th>
+                <th width="55%">Project Name <i class="fa-solid fa-arrow-down-long"></i></th>
+                <th>Progress <i class="fa-solid fa-arrow-down-long"></i></th>
+                <th>Action <i class="fa-solid fa-arrow-down-long"></i></th>
             </tr>
             <tr >
            <td > Office Management <br/>
@@ -72,7 +72,7 @@ function RecentProjects(props)
             <td className="text-center"><a href="" style={{color:'black'}} ><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
             </tr>
         </tbody>
-        <tfoot>
+        <tfoot className="border border-2">
         <tr>
             <td colSpan={5} className="text-center">View all payments</td>
           </tr>
