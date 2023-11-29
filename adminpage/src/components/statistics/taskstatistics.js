@@ -19,7 +19,7 @@ function TaskStatistics(props)
   
   <ProgressBar variant="warning" now={40} style={{width:"90%",height:"7px"}}/>
   </li>
-  <li class="list-group-item  mb-1 py-4"><h6 className="d-flex justify-content-between"><span>Completed Projects</span><span>85 / 112\</span></h6>
+  <li class="list-group-item  mb-1 py-4"><h6 className="d-flex justify-content-between"><span>Completed Projects</span><span>85 / 112</span></h6>
   <ProgressBar variant="success" now={85} style={{width:"90%",height:"7px"}}/>
   </li>
   <li class="list-group-item  mb-1 py-4"><h6 className="d-flex justify-content-between"><span>Open Tickets</span><span>190 / 212</span></h6>
@@ -120,7 +120,7 @@ function TaskStatistics(props)
    <h4>Today Absent </h4>
    <Alert variant="danger" className="d-inline" style={{padding:"5px 8px"}}>5</Alert>
    </div>
-    <div>
+    <div className="border border-1 p-3">
         <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px"/>
         <span>Martin Lewis</span>
         <h6>4 Sep 2023</h6>
@@ -129,7 +129,7 @@ function TaskStatistics(props)
         <Alert variant="danger" className="d-inline py-0 px-1" style={{fontSize:"12px"}}>Pending</Alert>
         </div>
     </div>
-    <div className="">
+    <div className="border border-1 p-3">
     <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px"/>
     <span>Martin Lewis</span>
     <h6>4 Sep 2023</h6>
