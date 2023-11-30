@@ -6,12 +6,15 @@ import {Line} from "react-chartjs-2"
 
 function CurlyLineChart(props)
 {
+
+  const dataone=[45,70,50,75,46,80,100]
+  const datatwo=[85,64,40,65,40,59,50]
     const data={
         labels:[2006,2007,2008,2009,2010,2011,2012],
         datasets:[
             {
                 label:"sales overview",
-                data:[45,70,50,75,46,80,100],
+                data:dataone,
                 borderColor:
                 'rgba(255,174,66)'
                  ,
@@ -24,7 +27,7 @@ function CurlyLineChart(props)
             },
             {
                 label:'sales overview',
-                data:[85,64,40,65,40,59,50],
+                data:datatwo,
                 borderColor:'rgba(255,145,164)',
                 backgroundColor:'rgba(255,145,164)',
                 cubicInterpolationMode:"monotone",

@@ -4,8 +4,8 @@ import {Bar} from "react-chartjs-2"
 
 
 
-
-
+const dataone=[92,65,50,75,51,70,95]
+const datatwo=[85,60,35,65,35,61,90]
 function BarChart(props)
 {
     const data={
@@ -13,7 +13,7 @@ function BarChart(props)
         datasets:[
         {
             label:'Total Revenue',
-            data:[92,65,50,75,51,70,95],
+            data:dataone,
             borderColor:[
                'rgba(255,174,66)',
                'rgba(255,174,66)',
@@ -36,7 +36,7 @@ function BarChart(props)
         },
         {
             label:'Total Revenue',
-            data:[85,60,35,65,35,61,90],
+            data:datatwo,
             borderColor:[
                 'rgba(255,145,164)',
             ],

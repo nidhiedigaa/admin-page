@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 
 import {Table} from "react-bootstrap"
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -8,8 +8,35 @@ const styles={
 
 
 
+
 function Clients(props)
 {
+let[userone,setuserone]=useState('Active')
+let[usertwo,setusertwo]=useState('Active')
+let[userthree,setuserthree]=useState('Active')
+let[userfour,setuserfour]=useState('Active')
+let[userfive,setuserfive]=useState('Active')
+ function changeuserone(value)
+ {
+      value==='Active'?setuserone('Active'):setuserone('Inactive')
+ }
+ function changeusertwo(value)
+ {
+      value==='Active'?setusertwo('Active'):setusertwo('Inactive')
+ }
+ function changeuserthree(value)
+ {
+      value==='Active'?setuserthree('Active'):setuserthree('Inactive')
+ }
+ function changeuserfour(value)
+ {
+      value==='Active'?setuserfour('Active'):setuserfour('Inactive')
+ }
+ function changeuserfive(value)
+ {
+      value==='Active'?setuserfive('Active'):setuserfive('Inactive')
+ }
+  
     return(<>
       <Table className="border">
         <thead className="border border-2">
@@ -29,13 +56,13 @@ function Clients(props)
                <td>barrycuda@example.com</td>
                <td><Dropdown>
       <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      <i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i> Active
+      {userone=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userone}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
        
-        <Dropdown.Item href="#/action-2">Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Inactive</Dropdown.Item>
+        <Dropdown.Item href="#/action-2" onClick={()=>changeuserone('Active')}>Active</Dropdown.Item>
+        <Dropdown.Item href="#/action-3" onClick={()=>changeuserone('Inactive')}>Inactive</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown></td>
 <td className="text-center"><a href="" style={{color:'black'}} ><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
@@ -45,13 +72,13 @@ function Clients(props)
                <td>tressawexler@example.com</td>
                <td><Dropdown>
       <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      <i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i> Inactive
+      {usertwo=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {usertwo}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
        
-        <Dropdown.Item href="#/action-2">Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Inactive</Dropdown.Item>
+        <Dropdown.Item href="#/action-2" onClick={()=>changeusertwo('Active')}>Active</Dropdown.Item>
+        <Dropdown.Item href="#/action-3" onClick={()=>changeusertwo('Inactive')}>Inactive</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown></td>
 <td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
@@ -61,13 +88,13 @@ function Clients(props)
                <td>rubybartlett@example.com</td>
                <td><Dropdown>
       <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      <i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i> Inactive
+      {userthree=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userthree}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
        
-        <Dropdown.Item href="#/action-2">Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Inactive</Dropdown.Item>
+        <Dropdown.Item href="#/action-2" onClick={()=>changeuserthree('Active')}>Active</Dropdown.Item>
+        <Dropdown.Item href="#/action-3" onClick={()=>changeuserthree('Inactive')}>Inactive</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown></td>
 <td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
@@ -77,13 +104,13 @@ function Clients(props)
                <td>mistytison@example.com</td>
                <td><Dropdown>
       <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      <i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i> Active
+      {userfour=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userfour}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
        
-        <Dropdown.Item href="#/action-2">Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Inactive</Dropdown.Item>
+        <Dropdown.Item href="#/action-2" onClick={()=>changeuserfour('Active')}>Active</Dropdown.Item>
+        <Dropdown.Item href="#/action-3" onClick={()=>changeuserfour('Inactive')}>Inactive</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown></td>
 <td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
@@ -93,13 +120,13 @@ function Clients(props)
                <td>danieldeacon@example.com</td>
                <td><Dropdown>
       <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      <i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i> Inactive
+      {userfive=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userfive}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
        
-        <Dropdown.Item href="#/action-2">Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Inactive</Dropdown.Item>
+        <Dropdown.Item href="#/action-2" onClick={()=>changeuserfive('Active')}>Active</Dropdown.Item>
+        <Dropdown.Item href="#/action-3" onClick={()=>changeuserfive('Inactive')}>Inactive</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown></td>
 <td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>

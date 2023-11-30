@@ -26,6 +26,9 @@ function App() {
       <div>
         <TaskStatistics></TaskStatistics>
       </div>
+      <div>
+        <ChartDashBoard></ChartDashBoard>
+      </div>
       <div className="charts">
 <div className="d-flex flex-column justify-content-center align-items-center">
 <BarChart className="barchart"></BarChart>
