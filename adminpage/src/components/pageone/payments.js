@@ -1,7 +1,7 @@
 import React from "react"
 import "./pageone.css"
 import {Table} from "react-bootstrap"
-
+import details from "./paymentdata.json"
 function Payments(props)
 {
     return(<>
@@ -19,27 +19,16 @@ function Payments(props)
               <th>Paid Date <i className="fa-solid fa-arrow-down-long"></i></th>
               <th>Paid Amount <i className="fa-solid fa-arrow-down-long"></i></th>
             </tr>
-            <tr>
-            <td>#INV-0001</td>
-            <td>Global Technologies</td>
-            <td>Paypal</td>
-            <td>11 Mar 2023</td>
-            <td>$380</td>
-            </tr>
-            <tr>
-            <td>#INV-0002</td>
-            <td>Delta Infotech</td>
-            <td>Paypal</td>
-            <td>8 Feb 2023</td>
-            <td>$500</td>
-            </tr>
-            <tr>
-            <td>#INV-0003</td>
-            <td>Cream Inc</td>
-            <td>Paypal</td>
-            <td>23 Jan 2023</td>
-            <td>$60</td>
-            </tr>
+          {details.map((ele,ind,arr)=>
+          {
+            return (<tr key={ind} className="text-capitalize">
+              <td >{ele.invoice}</td>
+              <td >{ele.client}</td>
+              <td >{ele.payment}</td>
+              <td >{ele.date}</td>
+              <td >{ele.amount}</td>
+              </tr>)
+          })}
         </tbody>
         <tfoot className="border border-2">
           <tr>

@@ -2,6 +2,7 @@ import React,{useState} from "react"
 
 import {Table} from "react-bootstrap"
 import Dropdown from 'react-bootstrap/Dropdown';
+import details from "./clientdata.json"
 const styles={
   whiteSpace:"pre"
 }
@@ -16,6 +17,8 @@ let[usertwo,setusertwo]=useState('Active')
 let[userthree,setuserthree]=useState('Active')
 let[userfour,setuserfour]=useState('Active')
 let[userfive,setuserfive]=useState('Active')
+let statusdata=[userone,usertwo,userthree,userfour,userfive]
+let handlerdata=[changeuserone,changeusertwo,changeuserthree,changeuserfour,changeuserfive]
  function changeuserone(value)
  {
       value==='Active'?setuserone('Active'):setuserone('Inactive')
@@ -51,86 +54,28 @@ let[userfive,setuserfive]=useState('Active')
             <th>Status <i className="fa-solid fa-arrow-down-long"></i></th>
             <th>Action <i className="fa-solid fa-arrow-down-long"></i></th>
             </tr>
-            <tr>
-              <td style={styles}> <img width="50px" height="50px" style={{borderRadius:"80px"}} src={'profileimages/matt.jpg'} alt=""/>  Barry Cuda CEO</td>
-               <td>barrycuda@example.com</td>
-               <td><Dropdown>
-      <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      {userone=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userone}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-       
-        <Dropdown.Item href="#/action-2" onClick={()=>changeuserone('Active')}>Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3" onClick={()=>changeuserone('Inactive')}>Inactive</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown></td>
-<td className="text-center"><a href="" style={{color:'black'}} ><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
-            </tr>
-            <tr>
-            <td style={styles}><img width="50px" height="50px" style={{borderRadius:"80px"}} src={'profileimages/jen.jpg'} alt=""/>  Tressa Wexler Manager</td>
-               <td>tressawexler@example.com</td>
-               <td><Dropdown>
-      <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      {usertwo=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {usertwo}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-       
-        <Dropdown.Item href="#/action-2" onClick={()=>changeusertwo('Active')}>Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3" onClick={()=>changeusertwo('Inactive')}>Inactive</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown></td>
-<td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
-            </tr>
-            <tr>
-            <td style={styles}><img width="50px" height="50px" style={{borderRadius:"80px"}} src={'profileimages/lisa.jpg'} alt=""/>  Ruby Bartlett CEO</td>
-               <td>rubybartlett@example.com</td>
-               <td><Dropdown>
-      <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      {userthree=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userthree}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-       
-        <Dropdown.Item href="#/action-2" onClick={()=>changeuserthree('Active')}>Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3" onClick={()=>changeuserthree('Inactive')}>Inactive</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown></td>
-<td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
-            </tr>
-            <tr>
-            <td><img width="50px" height="50px" style={{borderRadius:"80px"}} src={'profileimages/court.jpg'} alt=""/>  Misty Tison Ceo</td>
-               <td>mistytison@example.com</td>
-               <td><Dropdown>
-      <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      {userfour=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userfour}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-       
-        <Dropdown.Item href="#/action-2" onClick={()=>changeuserfour('Active')}>Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3" onClick={()=>changeuserfour('Inactive')}>Inactive</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown></td>
-<td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
-            </tr>
-            <tr>
-            <td><img width="50px" height="50px" style={{borderRadius:"80px"}} src={'/profileimages/david.jpg'} alt=""/> Daniel Deacon Ceo</td>
-               <td>danieldeacon@example.com</td>
-               <td><Dropdown>
-      <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-      {userfive=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {userfive}
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-       
-        <Dropdown.Item href="#/action-2" onClick={()=>changeuserfive('Active')}>Active</Dropdown.Item>
-        <Dropdown.Item href="#/action-3" onClick={()=>changeuserfive('Inactive')}>Inactive</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown></td>
-<td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
-            </tr>
+           {
+            details.map((ele,ind,arr)=>
+            {
+              return( <tr key={ind}>
+                <td><img width="50px" height="50px" style={{borderRadius:"80px"}} src={ele.image} alt=""/> {ele.name}</td>
+                   <td>{ele.email}</td>
+                   <td><Dropdown>
+          <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
+          {statusdata[ind]=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {statusdata[ind]}
+          </Dropdown.Toggle>
+    
+          <Dropdown.Menu>
+           
+            <Dropdown.Item href="#/action-2" onClick={()=>handlerdata[ind]('Active')}>Active</Dropdown.Item>
+            <Dropdown.Item href="#/action-3" onClick={()=>handlerdata[ind]('Inactive')}>Inactive</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown></td>
+    <td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
+                </tr>)
+            })
+           }
+          
         </tbody>
         <tfoot className="border border-2">
           <tr className="text-center">
