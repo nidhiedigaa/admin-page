@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import {Row,Col,Alert} from "react-bootstrap"
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
@@ -6,7 +6,14 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 function TaskStatistics(props)
 {
 
-   return( <Row>
+  let[profile,setProfile]=useState([{name:"martin lewis"},{name:"lewis capaldi"}])
+
+
+  function change()
+  {
+    setProfile([{name:"jennifer lawrence"},{name:"amily blunt"}])
+  }
+   return( <Row className="m-3">
         <Col className="p-3 m-3 border">
         <div>
             <h4>Statistics</h4>
@@ -39,14 +46,14 @@ function TaskStatistics(props)
         <div>
             <h4 className="">Task Statistics</h4>
         <div className="d-flex gap-3" style={{marginTop:"15px"}}>
-            <div className="d-flex flex-grow-1 flex-column justify-content-center align-items-center p-2 border">
-            <h6>
+            <div className="d-flex flex-grow-1 flex-column justify-content-center align-items-center p-2 border" style={{backgroundColor:"rgba(245, 245, 245)"}}>
+            <h6 >
                 Total Tasks
             </h6>
             <h4>385</h4>
             </div>
             
-            <div className="d-flex flex-grow-1 flex-column justify-content-center align-items-center p-2 border">
+            <div className="d-flex flex-grow-1 flex-column justify-content-center align-items-center p-2 border" style={{backgroundColor:"rgba(245, 245, 245)"}}>
             <h6>
                 Overdue Tasks
             </h6>
@@ -122,7 +129,7 @@ function TaskStatistics(props)
    </div>
     <div className="border border-1 p-3">
         <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px"/>
-        <span>Martin Lewis</span>
+        <span className="text-capitalize">{profile[0].name}</span>
         <h6>4 Sep 2023</h6>
         <div className="d-flex justify-content-between">
         <p style={{fontSize:"18px",opacity:"0.5"}}>Leave Date</p>
@@ -131,7 +138,7 @@ function TaskStatistics(props)
     </div>
     <div className="border border-1 p-3">
     <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px"/>
-    <span>Martin Lewis</span>
+    <span className="text-capitalize">{profile[1].name}</span>
     <h6>4 Sep 2023</h6>
     <div className="d-flex justify-content-between">
     <p style={{fontSize:"18px",opacity:"0.5"}}>Leave Date</p>
@@ -139,7 +146,7 @@ function TaskStatistics(props)
     </div>
     </div>
     <div>
-        <button style={{border:"none"}} className="border border-1 d-block m-auto">Load More</button>
+        <button style={{border:"none"}} className="border border-1 d-block m-auto" onClick={change}>Load More</button>
     </div>
    </div>
 

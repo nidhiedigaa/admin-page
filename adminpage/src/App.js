@@ -9,11 +9,12 @@ import CurlyLineChart from './components/chart/curlylinechart';
 import RecentProjects from './components/pageone/recentprojects';
 import Statistics from './components/statistics/salarystatistics';
 import TaskStatistics from './components/statistics/taskstatistics';
-
+import NavBar from './components/navbar/navigation';
 
 function App() {
   return (
     <div className="App">
+      <NavBar></NavBar>
        <div>
         <ChartDashBoard></ChartDashBoard>
       </div>

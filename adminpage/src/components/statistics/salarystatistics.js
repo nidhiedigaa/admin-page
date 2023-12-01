@@ -6,7 +6,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 function Statistics(props)
 {
     return (<>
-    <Row className="mx-4">
+    <Row className="m-3">
         <Col xl={6} xxl={3} className="border border-2 ">
         <div className="d-flex flex-column" style={{rowGap:"10px"}}>
             <h5 className="d-flex justify-content-between">
