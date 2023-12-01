@@ -8,7 +8,7 @@ const data=[{number:112,name:"Projects"},{number:44,name:"Clients"},{number:37,n
 function ChartDashBoard(props)
 {
     return(<>
-    <Row className="mx-3 my-4 gx-3">
+    <Row className="mx-5 my-4 gx-3">
         <Col>
         <h2>Welcome Admin</h2>  
         <h4 style={{opacity:"0.5"}}>Dashboard</h4>

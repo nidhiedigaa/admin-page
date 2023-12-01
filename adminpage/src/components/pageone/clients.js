@@ -1,6 +1,6 @@
 import React,{useState} from "react"
 
-import {Table} from "react-bootstrap"
+import {Table,Accordion} from "react-bootstrap"
 import Dropdown from 'react-bootstrap/Dropdown';
 import details from "./clientdata.json"
 const styles={
@@ -79,7 +79,17 @@ let handlerdata=[changeuserone,changeusertwo,changeuserthree,changeuserfour,chan
         </tbody>
         <tfoot className="border border-2">
           <tr className="text-center">
-        <td colSpan={5}>View all clients</td>
+        <td colSpan={5}><Accordion defaultActiveKey={['0']}  >
+      <Accordion.Item eventKey="0">
+        <Accordion.Header className="text-center" ><span style={{position:"absolute",left:"40%"}}>View All Clients</span></Accordion.Header >
+        <Accordion.Body>
+         <Table style={{width:"100%"}}>
+    
+         </Table>
+        </Accordion.Body>
+      </Accordion.Item>
+    
+    </Accordion></td>
           </tr>
         </tfoot>
     </Table>

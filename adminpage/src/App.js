@@ -14,6 +14,17 @@ import TaskStatistics from './components/statistics/taskstatistics';
 function App() {
   return (
     <div className="App">
+       <div>
+        <ChartDashBoard></ChartDashBoard>
+      </div>
+      <div className="charts">
+<div className="d-flex flex-column justify-content-center align-items-center">
+<BarChart className="barchart"></BarChart>
+</div>
+ <div className="d-flex flex-column justify-content-center align-items-center">
+ <CurlyLineChart></CurlyLineChart>
+ </div>
+ </div>
       <div className="admin-page-3 ">
       <Invoices></Invoices>
       <Payments></Payments>
@@ -26,17 +37,7 @@ function App() {
       <div>
         <TaskStatistics></TaskStatistics>
       </div>
-      <div>
-        <ChartDashBoard></ChartDashBoard>
-      </div>
-      <div className="charts">
-<div className="d-flex flex-column justify-content-center align-items-center">
-<BarChart className="barchart"></BarChart>
-</div>
- <div className="d-flex flex-column justify-content-center align-items-center">
- <CurlyLineChart></CurlyLineChart>
- </div>
- </div>
+     
  </div>
 
 

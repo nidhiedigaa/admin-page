@@ -1,14 +1,14 @@
 import React from "react"
 import Chart from "chart.js/auto"
 import {Line} from "react-chartjs-2"
-
+import datas from "./linechartdata.json"
 
 
 function CurlyLineChart(props)
 {
 
-  const dataone=[45,70,50,75,46,80,100]
-  const datatwo=[85,64,40,65,40,59,50]
+  const[dataone,datatwo]=datas
+
     const data={
         labels:[2006,2007,2008,2009,2010,2011,2012],
         datasets:[
@@ -61,7 +61,7 @@ function CurlyLineChart(props)
         }
       }
     return (<>
-    <div style={{width:"90%"}} className="border border-1">
+    <div style={{width:"95%"}} className="border border-1 p-3" >
         <h3 className="text-center">Sales Overview</h3>
     <Line data={data} options={options}></Line>
     </div>

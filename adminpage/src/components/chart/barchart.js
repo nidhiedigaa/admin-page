@@ -1,11 +1,12 @@
 import React from "react"
 import Chart from "chart.js/auto"
 import {Bar} from "react-chartjs-2"
+import datas from "./barchartdata.json"
 
 
+const[dataone,datatwo]=datas
 
-const dataone=[92,65,50,75,51,70,95]
-const datatwo=[85,60,35,65,35,61,90]
+
 function BarChart(props)
 {
     const data={
@@ -16,23 +17,13 @@ function BarChart(props)
             data:dataone,
             borderColor:[
                'rgba(255,174,66)',
-               'rgba(255,174,66)',
-               'rgba(255,174,66)',
-               'rgba(255,174,66)',
-               'rgba(255,174,66)',
-               'rgba(255,174,66)',
-               'rgba(255,174,66)'
             ],
             backgroundColor:[
                 'rgba(255,174,66)',
-                'rgba(255,174,66)',
-                'rgba(255,174,66)',
-                'rgba(255,174,66)',
-                'rgba(255,174,66)',
-                'rgba(255,174,66)',
-                'rgba(255,174,66)'
                 
-            ]
+            ],
+           
+            
         },
         {
             label:'Total Revenue',
@@ -63,15 +54,22 @@ function BarChart(props)
             max: 120,
             maxTicksLimit:5,
             stepSize: 30, // Adjust this based on your desired interval
+            ticks:{ min:20,
+              max: 120,
+              stepSize:30, // Adjust this based on your desired interval
+            }
           },
           x:
         {
-            grid:{display:false}
-        }
-        }
+            grid:{display:false},
+            barPercentage: 1
+        },
+       
+        },
+       
       }
     return (<>
-   <div style={{width:"90%"}} className="border border-1" >
+   <div style={{width:"95%"}} className="border border-1 p-3" >
    <h3 className="text-center">Total Revenue</h3>
     <Bar data={data} options={options}></Bar>
     </div></>)
