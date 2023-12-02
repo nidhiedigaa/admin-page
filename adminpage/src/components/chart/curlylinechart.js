@@ -61,7 +61,7 @@ function CurlyLineChart(props)
         }
       }
     return (<>
-    <div style={{width:"95%"}} className="border border-1 p-3" >
+    <div style={{width:"95%"}} className="border border-1 p-3 rounded-4 bg-white" >
         <h3 className="text-center">Sales Overview</h3>
     <Line data={data} options={options}></Line>
     </div>

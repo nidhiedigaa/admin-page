@@ -20,7 +20,7 @@ function NavBar(props)
     return (<>
     <Container fluid>
         <Row>
-            <Col className="mt-3 bg-black text-white p-3">
+            <Col className="mt-3  text-white p-3" style={{backgroundColor:"rgba(111,222,111)"}}>
             <nav className="d-flex justify-content-between ">
                <div className="d-flex gap-3 align-items-center">
                <img src={"./icon/icon.png"} width="30px" height="30px"/>
@@ -51,7 +51,7 @@ function NavBar(props)
   </span>
                </div>
                 </div>
-                <img src={url} width="35px" height="35px"/>
+                <img src={url} width="35px" height="35px" className="rounded-circle"/>
                 <select >
                     <option selected>Admin</option>
                     <option></option>

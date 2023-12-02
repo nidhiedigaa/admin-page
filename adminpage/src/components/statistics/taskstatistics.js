@@ -14,7 +14,7 @@ function TaskStatistics(props)
     setProfile([{name:"jennifer lawrence"},{name:"amily blunt"}])
   }
    return( <Row className="m-3">
-        <Col className="p-3 m-3 border">
+        <Col className="p-3 m-3 border bg-white">
         <div>
             <h4>Statistics</h4>
             <div className="m-3">
@@ -42,7 +42,7 @@ function TaskStatistics(props)
         
         
         </Col>
-        <Col className="p-3 m-3 border">
+        <Col className="p-3 m-3 border bg-white">
         <div>
             <h4 className="">Task Statistics</h4>
         <div className="d-flex gap-3" style={{marginTop:"15px"}}>
@@ -121,7 +121,7 @@ function TaskStatistics(props)
         </div>
         </div>
         </Col>
-    <Col  className="p-4 m-3 border">
+    <Col  className="p-4 m-3 border bg-white">
    <div className="d-flex flex-column gap-3 ">
    <div className="d-flex gap-2">
    <h4>Today Absent </h4>

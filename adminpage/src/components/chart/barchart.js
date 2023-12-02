@@ -69,7 +69,7 @@ function BarChart(props)
        
       }
     return (<>
-   <div style={{width:"95%"}} className="border border-1 p-3" >
+   <div style={{width:"95%"}} className="border border-1 p-3 rounded-4 bg-white" >
    <h3 className="text-center">Total Revenue</h3>
     <Bar data={data} options={options}></Bar>
     </div></>)

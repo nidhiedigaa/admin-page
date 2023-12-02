@@ -13,17 +13,17 @@ import NavBar from './components/navbar/navigation';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:"rgba(244,244,245)"}}>
       <NavBar></NavBar>
-       <div>
+       <div className="bg-white">
         <ChartDashBoard></ChartDashBoard>
       </div>
       <div className="charts">
 <div className="d-flex flex-column justify-content-center align-items-center">
-<BarChart className="barchart"></BarChart>
+<BarChart className="barchart bg-white"></BarChart>
 </div>
  <div className="d-flex flex-column justify-content-center align-items-center">
- <CurlyLineChart></CurlyLineChart>
+ <CurlyLineChart className="bg-white"></CurlyLineChart>
  </div>
  </div>
       <div className="admin-page-3 ">

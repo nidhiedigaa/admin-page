@@ -7,7 +7,7 @@ function Statistics(props)
 {
     return (<>
     <Row className="m-3">
-        <Col xl={6} xxl={3} className="border border-2 ">
+        <Col xl={6} xxl={3} className="border border-2 bg-white">
         <div className="d-flex flex-column" style={{rowGap:"10px"}}>
             <h5 className="d-flex justify-content-between">
                 <span>New Employees</span>
@@ -20,7 +20,7 @@ function Statistics(props)
             <h6>Overall Employees <span style={{opacity:"0.5"}}>218</span></h6>
         </div>
         </Col>
-        <Col xl={6} xxl={3}  className="border border-2 col-sm-6 col-md">
+        <Col xl={6} xxl={3}  className="border border-2 col-sm-6 col-md bg-white">
         <div className="d-flex flex-column" style={{rowGap:"10px"}}>
             <h5 className="d-flex justify-content-between ">
                 <span>Earnings</span>
@@ -33,7 +33,7 @@ function Statistics(props)
             <h6>Previous Month <span style={{opacity:"0.5"}}>$1,15,852</span></h6>
         </div>
         </Col>
-        <Col xl={6} xxl={3} className="border border-2 col-sm-6 col-md ">
+        <Col xl={6} xxl={3} className="border border-2 col-sm-6 col-md bg-white">
         <div className="d-flex flex-column" style={{rowGap:"10px"}}>
             <h5 className="d-flex justify-content-between ">
                 <span>Expenses</span>
@@ -46,7 +46,7 @@ function Statistics(props)
             <h6>Previous Month <span style={{opacity:"0.5"}}>$7,500</span></h6>
         </div>
         </Col>
-        <Col xl={6} xxl={3} className="border border-2 col-sm-6 col-md">
+        <Col xl={6} xxl={3} className="border border-2 col-sm-6 col-md bg-white">
         <div className="d-flex flex-column" style={{rowGap:"10px"}}>
             <h5 className="d-flex justify-content-between ">
                 <span>Profit</span>
