@@ -14,7 +14,7 @@ function ChartDashBoard(props)
         <h4 style={{opacity:"0.5"}}>Dashboard</h4>
         </Col>
     </Row>
-    <Row className="gap-4 mx-5">
+    <Row className="gap-4 mx-5 ">
         <Col className="d-flex justify-content-between p-3 border border-2 rounded-3"><Alert variant="warning" className="rounded-circle p-2 d-flex align-items-center justify-content-center" style={{width:"60px"}}><i className="fa-solid fa-boxes-stacked fa-2xl" style={{color: "#e69119"}}></i></Alert>
         <div>
             <h3 className="ms-4">{data[0].number}</h3>
