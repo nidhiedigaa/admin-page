@@ -52,7 +52,15 @@
   {
     grid-template-columns : repeat(1,1fr);
   }
-
+  .charts
+  {
+    display:grid;
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+  #right-nav
+  {
+    display:none !important;
+  }
 }
 
 .charts
@@ -61,5 +69,6 @@
   grid-template-columns: repeat(2,1fr);
   padding:40px;
 }
+
 
 

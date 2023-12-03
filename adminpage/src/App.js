@@ -18,7 +18,7 @@ function App() {
        <div className="bg-white">
         <ChartDashBoard></ChartDashBoard>
       </div>
-      <div className="charts">
+      <div className="charts ">
 <div className="d-flex flex-column justify-content-center align-items-center">
 <BarChart className="barchart bg-white"></BarChart>
 </div>
