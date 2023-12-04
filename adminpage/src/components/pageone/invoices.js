@@ -47,24 +47,7 @@ function Invoices(props)
       <Accordion.Item eventKey="0">
         <Accordion.Header className="text-center" ><span style={{position:"absolute",left:"40%"}}>View All Invoices</span></Accordion.Header >
         <Accordion.Body>
-         <Table>
-        <tbody>
-            <tr>
-                <td>#INV-0004</td>
-                <td>Global Technologies</td>
-                <td>11 Mar 2023</td>
-                <td>$380</td>
-                <td><Alert variant="warning" className=" d-inline fw-bold" style={{color:"orange",padding:"0 5px",fontSize:"15px"}}>Partially Paid</Alert></td>
-            </tr>
-            <tr>
-            <td>#INV-0005</td>
-            <td>Delta Infotech</td>
-            <td>8 Feb 2023</td>
-            <td>$500</td>
-            <td><Alert variant="success" className=" d-inline fw-bold" style={{color:"green",padding:"0 5px",fontSize:"15px"}}>Paid</Alert></td>
-            </tr>
-            </tbody>
-         </Table>
+    
         </Accordion.Body>
       </Accordion.Item>
     

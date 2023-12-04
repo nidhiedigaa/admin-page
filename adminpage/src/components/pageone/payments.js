@@ -37,26 +37,7 @@ function Payments(props)
       <Accordion.Item eventKey="0">
         <Accordion.Header ><span style={{position:"absolute",left:"40%"}}>View All Invoices</span></Accordion.Header >
         <Accordion.Body>
-         <Table>
-        <tbody >
-            <tr >
-                <td style={{width:"100px",marginRight:"40px"}}>#INV-0004</td>
-                <td style={{width:"100px",marginRight:"40px"}}>Global Technologies</td>
-                <td style={{width:"100px",marginRight:"40px"}}>Pay Pal</td>
-                <td style={{width:"100px",marginRight:"40px"}}>11 Mar 2023</td>
-                <td style={{width:"100px",marginRight:"40px"}}>$380</td>
-               
-            </tr>
-            <tr>
-            <td>#INV-0005</td>
-            <td>Delta Infotech</td>
-            <td>Pay Pal</td>
-            <td>8 Feb 2023</td>
-            <td>$500</td>
-            
-            </tr>
-            </tbody>
-         </Table>
+       
         </Accordion.Body>
       </Accordion.Item>
     
