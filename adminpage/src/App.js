@@ -10,12 +10,18 @@ import RecentProjects from './components/pageone/recentprojects';
 import Statistics from './components/statistics/salarystatistics';
 import TaskStatistics from './components/statistics/taskstatistics';
 import NavBar from './components/navbar/navigation';
-
+import SideBar from './components/sidenav/sidebar';
 function App() {
   return (
     <div className="App" style={{backgroundColor:"rgba(244,244,245)"}}>
       <NavBar></NavBar>
-       <div className="bg-white">
+      
+     <div className='sidenav-main'>
+     <div className="side-nav" style={{ width: '70px', backgroundColor: 'black' }}>
+      <SideBar ></SideBar>
+      </div>
+     <div className="main-content">
+     <div className="bg-white">
         <ChartDashBoard></ChartDashBoard>
       </div>
       <div className="charts">
@@ -38,6 +44,8 @@ function App() {
       <div>
         <TaskStatistics></TaskStatistics>
       </div>
+     </div>
+     </div>
      
  </div>
 

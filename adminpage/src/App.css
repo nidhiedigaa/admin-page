@@ -70,5 +70,18 @@
   padding:40px;
 }
 
+.main-content
+{
+  flex-grow:1
+}
+
+.side-nav
+{
+ 
+}
+.sidenav-main
+{
+  display:flex;
+}
 
 
