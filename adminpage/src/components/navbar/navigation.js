@@ -1,14 +1,16 @@
-import React,{useState} from "react"
+import React,{useState,useContext} from "react"
 import {Container,Row,Col} from "react-bootstrap"
 import { FaAlignLeft } from "react-icons/fa";
-
-
+import SideBar from "./sidebar";
+import {data} from "./global"
 
 function NavBar(props)
 {
+  let{changevisibility}=useContext(data)
     let url='https://th.bing.com/th/id/OIP.qIAbjZBvIWv4z-eqJPeqaQAAAA?w=425&h=425&rs=1&pid=ImgDetMain'
     let[notification,setNotification]=useState(1)
     let[message,setMessage]=useState(1)
+   
     function increment()
     {
         setNotification(notification+1)
@@ -20,11 +22,11 @@ function NavBar(props)
     return (<>
     <Container fluid>
         <Row>
-            <Col className="mt-3  text-white " style={{backgroundImage:"linear-gradient(to right, orange , RGB(255,120,120)50%)",padding:"10px"}}>
+            <Col className="mt-0  text-white " style={{backgroundImage:"linear-gradient(to right, orange , RGB(255,120,120)50%)",padding:"10px",position:'relative'}}>
             <nav className="d-flex justify-content-between">
                <div className="d-flex gap-4 align-items-center">
                <img src={"./icon/iconone.png"} width="30px" height="30px"/>
-                <FaAlignLeft color="white" />
+              <button onClick={changevisibility} className="bg-transparent border border-0">  <FaAlignLeft color="white"  /></button>
                 <h4>Dream Technologies</h4>
                </div>
                <div className="d-flex gap-3 me-3 align-items-center text-white" id="right-nav">
@@ -66,6 +68,7 @@ function NavBar(props)
 </div>
                </div>
             </nav>
+          
             </Col>
         </Row>
     </Container>

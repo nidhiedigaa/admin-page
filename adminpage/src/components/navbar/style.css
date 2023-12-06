@@ -1,0 +1,10 @@
+.admin-dashboard,.employee-dashboard
+{
+    text-decoration:none;
+}
+
+.admin-dashboard:hover,.employee-dashboard:hover
+{
+    color:orange !important;
+    text-decoration:underline;
+}
