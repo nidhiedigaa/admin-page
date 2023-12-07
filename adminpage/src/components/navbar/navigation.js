@@ -1,5 +1,5 @@
 import React,{useState,useContext} from "react"
-import {Container,Row,Col} from "react-bootstrap"
+import {Container,Row,Col,Dropdown} from "react-bootstrap"
 import { FaAlignLeft } from "react-icons/fa";
 import SideBar from "./sidebar";
 import {data} from "./global"
@@ -20,7 +20,7 @@ function NavBar(props)
         setMessage((pv)=>pv+1)
     }
     return (<>
-    <Container fluid>
+    <Container fluid style={{position:'sticky',top:'0px'}}>
         <Row>
             <Col className="mt-0  text-white " style={{backgroundImage:"linear-gradient(to right, orange , RGB(255,120,120)50%)",padding:"10px",position:'relative'}}>
             <nav className="d-flex justify-content-between">
@@ -33,14 +33,18 @@ function NavBar(props)
                 <input type="search" placeholder="Search here" className="rounded-pill ps-3 text-white" style={{backgroundColor:"transparent",color:"white",border:"1px solid white"}}/>
                 <i className="fa-solid fa-magnifying-glass fa-lg" style={{color: "#eff1f6",position:"absolute",right:"440px"}}></i>
                 <img src={"./icon/flagone.jpg"} width="30px" height="20px" style={{marginLeft:"20px",position:"relative",left:"10px"}}/>
-                <button class="btn btn-secondary  dropdown-toggle bg-transparent text-white text-bold border border-0 btn-md" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-    English
-  </button>
-  <ul class="dropdown-menu">
-<li>Kannada</li>
-<li>Hindi</li>
-<li>Malyalam</li>
-  </ul>
+     
+  <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic" className='bg-transparent text-white text-bold border border-0 d-inline'>
+       English
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Kannada</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Hindi</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Malyalam</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
                <div style={{position:"relative"}}>
                <i class="fa-regular fa-bell fa-xl" style={{color: "#dbe3f0"}} role="button" onClick={increment}></i>
                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
@@ -59,12 +63,17 @@ function NavBar(props)
                 </div>
                 <img src={url} width="35px" height="35px" className="rounded-circle"/>
                 <div class="btn-group">
-  <button class="btn btn-secondary  dropdown-toggle bg-transparent text-white text-bold border border-0 btn-md" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-    Admin
-  </button>
-  <ul class="dropdown-menu">
-<li></li>
-  </ul>
+                <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic" className='bg-transparent text-white text-bold border border-0 d-inline'>
+       Admin
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Admin-one</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Admin-two</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Admin-three</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
 </div>
                </div>
             </nav>

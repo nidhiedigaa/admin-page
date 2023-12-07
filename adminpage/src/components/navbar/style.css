@@ -8,3 +8,9 @@
     color:orange !important;
     text-decoration:underline;
 }
+
+.main-container
+{
+    position: sticky !important;
+    top:0px !important;
+}

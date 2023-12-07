@@ -24,7 +24,7 @@ function App() {
     
      <Row>
     
-     <Col className='col-12'> <NavBar></NavBar></Col> 
+     <Col className='col-12' style={{position:'sticky',top:'0px',zIndex:'100'}}> <NavBar></NavBar></Col> 
     
      <Col className="d-flex">
      <div>
