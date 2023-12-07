@@ -36,7 +36,7 @@ function SideBar(props) {
   const [showDropdown, setShowDropdown] = useState(false);
   console.log(visibility)
   return (
-   visibility ?  <div className="main-container" style={{height:'100vh',backgroundColor: 'black',position:'sticky',bottom:'46px',top:'0px',overflow:'scroll',zIndex:'99' }} >
+   visibility ?  <div className="main-container-sidebar" style={{height:'100vh',backgroundColor: 'black',position:'sticky',bottom:'46px',top:'0px',overflow:'scroll',zIndex:'99' }} >
    <motion.div animate={{ width: '70px', backgroundColor: 'black' }} className='sidenav'>
     
      <IconContext.Provider value={{color:'white',size:'25px'}}>
@@ -83,7 +83,7 @@ function SideBar(props) {
      </IconContext.Provider>
     
    </motion.div>
- </div>:<div className="main-container text-white p-3 w-100" style={{height:'100vh',backgroundColor: 'black',zIndex:'99',position:'sticky',overflow:'auto',top:'0px' }} >
+ </div>:<div className="main-container-sidebar text-white p-3 w-100" style={{height:'100vh',backgroundColor: 'black',zIndex:'99',position:'sticky',overflow:'auto',top:'0px' }} >
 
   
    
