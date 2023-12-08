@@ -2,6 +2,7 @@ import React,{useState,useContext} from "react"
 import {Container,Row,Col,Dropdown} from "react-bootstrap"
 import { FaAlignLeft } from "react-icons/fa";
 import SideBar from "./sidebar";
+import { TfiAlignJustify } from "react-icons/tfi";
 import {data} from "./global"
 
 function NavBar(props)
@@ -29,12 +30,12 @@ function NavBar(props)
               <button onClick={changevisibility} className="bg-transparent border border-0">  <FaAlignLeft color="white"  /></button>
                 <h4>Dream Technologies</h4>
                </div>
-               <div className="d-flex gap-3 me-3 align-items-center text-white" id="right-nav">
-                <input type="search" placeholder="Search here" className="rounded-pill ps-3 text-white" style={{backgroundColor:"transparent",color:"white",border:"1px solid white"}}/>
-                <i className="fa-solid fa-magnifying-glass fa-lg" style={{color: "#eff1f6",position:"absolute",right:"440px"}}></i>
-                <img src={"./icon/flagone.jpg"} width="30px" height="20px" style={{marginLeft:"20px",position:"relative",left:"10px"}}/>
+               <div className="d-flex gap-3 me-3 align-items-center text-white" >
+                <input type="search" placeholder="Search here" className="rounded-pill ps-3 text-white right-nav" style={{backgroundColor:"transparent",color:"white",border:"1px solid white"}}/>
+                <i className="fa-solid fa-magnifying-glass fa-lg right-nav" style={{color: "#eff1f6",position:"absolute",right:"440px"}}></i>
+                <img src={"./icon/flagone.jpg"} className="right-nav" width="30px" height="20px" style={{marginLeft:"20px",position:"relative",left:"10px"}}/>
      
-  <Dropdown>
+  <Dropdown className="right-nav">
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='bg-transparent text-white text-bold border border-0 d-inline'>
        English
       </Dropdown.Toggle>
@@ -45,24 +46,24 @@ function NavBar(props)
         <Dropdown.Item href="#/action-3">Malyalam</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-               <div style={{position:"relative"}}>
-               <i class="fa-regular fa-bell fa-xl" style={{color: "#dbe3f0"}} role="button" onClick={increment}></i>
+               <div style={{position:"relative"}} className="right-nav">
+               <i className="fa-regular fa-bell fa-xl" style={{color: "#dbe3f0"}} role="button" onClick={increment}></i>
                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
     {notification}
-    <span class="visually-hidden">unread messages</span>
+    <span className="visually-hidden">unread messages</span>
   </span>
                </div>
-                <div>
+                <div className="right-nav">
                 <div style={{position:"relative"}}>
-                <i class="fa-regular fa-comment fa-xl" style={{color: "#e7edf8"}} role="button" onClick={messageincrement}></i>
+                <i className="fa-regular fa-comment fa-xl" style={{color: "#e7edf8"}} role="button" onClick={messageincrement}></i>
                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
     {message}
-    <span class="visually-hidden">unread messages</span>
+    <span className="visually-hidden">unread messages</span>
   </span>
                </div>
                 </div>
-                <img src={url} width="35px" height="35px" className="rounded-circle"/>
-                <div class="btn-group">
+                <img src={url} width="35px" height="35px" className="rounded-circle right-nav"/>
+                <div class="btn-group right-nav">
                 <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='bg-transparent text-white text-bold border border-0 d-inline'>
        Admin
@@ -75,6 +76,18 @@ function NavBar(props)
       </Dropdown.Menu>
     </Dropdown>
 </div>
+<Dropdown className="right-dropdown">
+      <Dropdown.Toggle className="bg-transparent border border-0 " id="dropdown-basic">
+      <TfiAlignJustify size="2rem" />
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu> 
+        <Dropdown.Item href="#/action-1">My Profile</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Log Out</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+
                </div>
             </nav>
           

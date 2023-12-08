@@ -31,13 +31,14 @@ import { MdReportGmailerrorred } from "react-icons/md";
 import { FaHandPointer } from "react-icons/fa";
 import { RiPagesLine } from "react-icons/ri";
 function SideBar(props) {
-  let {visibility}=useContext(data)
+  let {visibility,changevisibility}=useContext(data)
   let[dropdowns,dispatch]=useReducer(reducer,intitialValue)
   const [showDropdown, setShowDropdown] = useState(false);
-  console.log(visibility)
+  
   return (
-   visibility ?  <div className="main-container-sidebar" style={{height:'100vh',backgroundColor: 'black',position:'sticky',bottom:'46px',top:'0px',overflow:'scroll',zIndex:'99' }} >
-   <motion.div animate={{ width: '70px', backgroundColor: 'black' }} className='sidenav'>
+   visibility ?  <div className="main-container-sidebar" style={{height:'100vh',backgroundColor: 'black',position:'sticky',bottom:'46px',top:'0px',overflow:'scroll',zIndex:'99' }} 
+   >
+   <motion.div animate={{ width: '70px', backgroundColor: 'rgba(0,0,0,0)' }} className='sidenav'>
     
      <IconContext.Provider value={{color:'white',size:'25px'}}>
      <div className="d-flex flex-column gap-3 mb-5 mt-5 align-items-center" >
@@ -93,7 +94,7 @@ function SideBar(props) {
      <h6 className="align-self-start">Main</h6>
     
      
-      <span className="d-flex gap-2" >   <IoSpeedometerOutline /><button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('dashboard')}>Dashboard</button>
+      <span className="d-flex gap-2" >   <IoSpeedometerOutline onClick={()=>dispatch('dashboard')} /><button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('dashboard')}>Dashboard</button>
       
       </span>
       {dropdowns.dashboard &&   <div className="d-flex flex-column gap-3 mt-2 ms-5" >
@@ -101,7 +102,7 @@ function SideBar(props) {
     <div ><NavLink className="text-white employee-dashboard">Employee Dashboard</NavLink></div>
   </div>}
       
-      <span className="d-flex gap-2" >    <IoCubeOutline  /> <button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('app')} >Apps</button></span>
+      <span className="d-flex gap-2" >    <IoCubeOutline onClick={()=>dispatch('app')}  /> <button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('app')} >Apps</button></span>
       {dropdowns.app &&   <div className="d-flex flex-column gap-3 mt-2 ms-5" >
   <div> <NavLink className="text-white admin-dashboard">App One</NavLink></div>
     <div ><NavLink className="text-white employee-dashboard">App Two</NavLink></div>
@@ -110,12 +111,12 @@ function SideBar(props) {
     
      <div className="d-flex flex-column row-gap-2 mb-5  w-100">
       <h6 className="align-self-start">Employees</h6>
-      <span className="d-flex gap-2" >  <CgProfile /><button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('employees')}>Employees</button></span>
+      <span className="d-flex gap-2" >  <CgProfile onClick={()=>dispatch('employees')} /><button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('employees')}>Employees</button></span>
       {dropdowns.employees &&   <div className="d-flex flex-column gap-3 mt-2 ms-5" >
   <div> <NavLink className="text-white admin-dashboard">Employee One</NavLink></div>
     <div ><NavLink className="text-white employee-dashboard">Employee Two</NavLink></div>
   </div>}
-      <span className="d-flex gap-2" >   <IoPeopleOutline  /><button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('clients')}>Clients</button></span>
+      <span className="d-flex gap-2" >   <IoPeopleOutline onClick={()=>dispatch('clients')}  /><button className="dropdown-toggle bg-black text-white border border-0 " onClick={()=>dispatch('clients')}>Clients</button></span>
       {dropdowns.clients &&   <div className="d-flex flex-column gap-3 mt-2 ms-5" >
   <div> <NavLink className="text-white admin-dashboard">Client One</NavLink></div>
     <div ><NavLink className="text-white employee-dashboard">Client Two</NavLink></div>

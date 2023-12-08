@@ -57,11 +57,22 @@
     display:grid;
     grid-template-columns: repeat(1,1fr) !important;
   }
-  #right-nav
+  .right-nav
   {
     display:none !important;
   }
+  .right-dropdown
+  {
+    display:block !important;
+  }
+
 }
+
+.right-dropdown
+{
+  display:none;
+}
+
 
 .charts
 {
