@@ -18,7 +18,7 @@ function TaskStatistics(props)
         <div>
             <h4>Statistics</h4>
             <div className="m-3">
-            <ul class="list-group list-unstyled">
+            <ul className="list-group list-unstyled">
   <li class="list-group-item mb-1 py-4"><h6 className="d-flex justify-content-between"><span>Today Leave</span><span>4 / 65</span></h6>
   <ProgressBar variant="warning" now={20} style={{width:"90%",height:"7px"}}/>
   </li>
@@ -128,7 +128,7 @@ function TaskStatistics(props)
    <Alert variant="danger" className="d-inline" style={{padding:"5px 8px"}}>5</Alert>
    </div>
     <div className="border border-1 p-3">
-        <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px"/>
+        <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px" alt="chart"/>
         <span className="text-capitalize">{profile[0].name}</span>
         <h6>4 Sep 2023</h6>
         <div className="d-flex justify-content-between">
@@ -137,7 +137,7 @@ function TaskStatistics(props)
         </div>
     </div>
     <div className="border border-1 p-3">
-    <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px"/>
+    <img src={"/profileimages/emptyprofile.jpg"} height="50px" width="70px" alt="chart"/>
     <span className="text-capitalize">{profile[1].name}</span>
     <h6>4 Sep 2023</h6>
     <div className="d-flex justify-content-between">

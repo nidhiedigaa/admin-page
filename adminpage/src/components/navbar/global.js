@@ -1,6 +1,5 @@
 import React,{useState,createContext} from "react"
-import SideBar from "./sidebar"
-import NavBar from "./navigation"
+
 
 
 

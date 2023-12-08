@@ -1,7 +1,7 @@
 import React,{useState,useContext} from "react"
 import {Container,Row,Col,Dropdown} from "react-bootstrap"
 import { FaAlignLeft } from "react-icons/fa";
-import SideBar from "./sidebar";
+
 import { TfiAlignJustify } from "react-icons/tfi";
 import {data} from "./global"
 
@@ -26,14 +26,14 @@ function NavBar(props)
             <Col className="mt-0  text-white " style={{backgroundImage:"linear-gradient(to right, orange , RGB(255,120,120)50%)",padding:"10px",position:'relative'}}>
             <nav className="d-flex justify-content-between">
                <div className="d-flex gap-4 align-items-center">
-               <img src={"./icon/iconone.png"} width="30px" height="30px"/>
+               <img src={"./icon/iconone.png"} width="30px" height="30px" alt=".."/>
               <button onClick={changevisibility} className="bg-transparent border border-0">  <FaAlignLeft color="white"  /></button>
                 <h4>Dream Technologies</h4>
                </div>
                <div className="d-flex gap-3 me-3 align-items-center text-white" >
                 <input type="search" placeholder="Search here" className="rounded-pill ps-3 text-white right-nav" style={{backgroundColor:"transparent",color:"white",border:"1px solid white"}}/>
                 <i className="fa-solid fa-magnifying-glass fa-lg right-nav" style={{color: "#eff1f6",position:"absolute",right:"440px"}}></i>
-                <img src={"./icon/flagone.jpg"} className="right-nav" width="30px" height="20px" style={{marginLeft:"20px",position:"relative",left:"10px"}}/>
+                <img src={"./icon/flagone.jpg"}  alt=".." className="right-nav" width="30px" height="20px" style={{marginLeft:"20px",position:"relative",left:"10px"}}/>
      
   <Dropdown className="right-nav">
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='bg-transparent text-white text-bold border border-0 d-inline'>
@@ -41,9 +41,9 @@ function NavBar(props)
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Kannada</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Hindi</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Malyalam</Dropdown.Item>
+        <Dropdown.Item href="/action-1">Kannada</Dropdown.Item>
+        <Dropdown.Item href="/action-2">Hindi</Dropdown.Item>
+        <Dropdown.Item href="/action-3">Malyalam</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
                <div style={{position:"relative"}} className="right-nav">
@@ -62,7 +62,7 @@ function NavBar(props)
   </span>
                </div>
                 </div>
-                <img src={url} width="35px" height="35px" className="rounded-circle right-nav"/>
+                <img src={url}  alt=".." width="35px" height="35px" className="rounded-circle right-nav"/>
                 <div class="btn-group right-nav">
                 <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='bg-transparent text-white text-bold border border-0 d-inline'>
@@ -70,9 +70,9 @@ function NavBar(props)
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Admin-one</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Admin-two</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Admin-three</Dropdown.Item>
+        <Dropdown.Item href="/action-1">Admin-one</Dropdown.Item>
+        <Dropdown.Item href="/action-2">Admin-two</Dropdown.Item>
+        <Dropdown.Item href="/action-3">Admin-three</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
 </div>
@@ -82,9 +82,9 @@ function NavBar(props)
       </Dropdown.Toggle>
 
       <Dropdown.Menu> 
-        <Dropdown.Item href="#/action-1">My Profile</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Log Out</Dropdown.Item>
+        <Dropdown.Item href="/action-1">My Profile</Dropdown.Item>
+        <Dropdown.Item href="/action-2">Settings</Dropdown.Item>
+        <Dropdown.Item href="/action-3">Log Out</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
 

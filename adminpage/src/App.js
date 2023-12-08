@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Invoices from './components/pageone/invoices';
 import Clients from './components/pageone/clients';
@@ -14,7 +14,7 @@ import SideBar from './components/navbar/sidebar';
 import Global from './components/navbar/global';
 import {Row,Col} from "react-bootstrap"
 import { BrowserRouter } from 'react-router-dom/dist/umd/react-router-dom.development';
-import{Routes,Route} from "react-router-dom"
+
 function App() {
   return (
 <BrowserRouter>

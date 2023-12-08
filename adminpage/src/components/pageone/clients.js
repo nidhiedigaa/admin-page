@@ -3,9 +3,7 @@ import React,{useState} from "react"
 import {Table,Accordion} from "react-bootstrap"
 import Dropdown from 'react-bootstrap/Dropdown';
 import details from "./clientdata.json"
-const styles={
-  whiteSpace:"pre"
-}
+
 
 
 
@@ -62,7 +60,7 @@ let handlerdata=[changeuserone,changeusertwo,changeuserthree,changeuserfour,chan
                    <td>{ele.email}</td>
                    <td><Dropdown>
           <Dropdown.Toggle className="btn btn-outline-secondary px-3 py-0" as="button" id="dropdown-basic" style={{borderRadius:"20px"}}>
-          {statusdata[ind]=='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {statusdata[ind]}
+          {statusdata[ind]==='Active'?<i className="fa-regular fa-circle-dot" style={{color: "#0eeb0a"}}></i>:<i className="fa-regular fa-circle-dot" style={{color: "#eb0a20"}}></i>} {statusdata[ind]}
           </Dropdown.Toggle>
     
           <Dropdown.Menu>
@@ -71,7 +69,7 @@ let handlerdata=[changeuserone,changeusertwo,changeuserthree,changeuserfour,chan
             <Dropdown.Item href="#/action-3" onClick={()=>handlerdata[ind]('Inactive')}>Inactive</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown></td>
-    <td className="text-center"><a href="" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
+    <td className="text-center"><a href="/" style={{color:'black'}}><i className="fa-solid fa-ellipsis-vertical"></i></a></td>
                 </tr>)
             })
            }
